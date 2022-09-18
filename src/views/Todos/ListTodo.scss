@@ -1,0 +1,32 @@
+.list-todo-container {
+    .add-todo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+       
+    }
+    .list-todo-content {
+        width: 400px;
+        margin: 0 auto;
+        font-size: 16px;
+
+        .todo-child {
+            &:first-child{
+                border-top: 1px solid #ccc
+            }
+            margin-top: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+        }
+       
+    }
+}
+button{
+    padding:6px 12px;
+}
+input{
+    padding:6px 12px;
+    width: 300px;
+}

@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import App from './views/App';
+import './styles/global.scss'
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './store/reducers/rootReducer'
+// import {FormComponent,Submit} from './views/Example/FormComponent'
+// import AddComponent from './views/Example/AddComponent'
 
+// import MyComponent from './views/Example/MyComponent'
+const reduxStore = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <Provider store = {reduxStore}>
     <App />
+  </Provider>
+    {/* <FormComponent/>
+    <Submit />
+    <AddComponent /> */}
   </React.StrictMode>
 );
 
